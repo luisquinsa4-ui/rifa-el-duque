@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rifas y Sorteos El Duque</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f5;
+      color: #222;
+    }
+    header {
+      background: #6fbf44;
+      padding: 30px 20px;
+      text-align: center;
+      color: #fff;
+    }
+    header img {
+      max-width: 180px;
+      margin-bottom: 15px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+    h1 {
+      margin-top: 0;
+      color: #2e7d32;
+    }
+    h2 {
+      color: #2e7d32;
+      margin-top: 30px;
+    }
+    .highlight {
+      background: #e8f5e9;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 1.2em;
+      margin: 20px 0;
+    }
+    .tickets {
+      text-align: center;
+      font-size: 1.1em;
+      margin: 20px 0;
+    }
+    .steps li {
+      margin-bottom: 10px;
+    }
+    .contact {
+      background: #f1f8f4;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    footer {
+      text-align: center;
+      margin: 40px 0 10px;
+      font-weight: bold;
+      color: #2e7d32;
+    }
+    a {
+      color: #2e7d32;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo-el-duque.png" alt="Rifas El Duque" />
+  <h1>🎉 GRAN RIFA – Rifas y Sorteos El Duque</h1>
+  <p>📅 Sorteo: <strong>24 de diciembre</strong></p>
+  <p>📍 Transmisión: Facebook Live y WhatsApp</p>
+</header>
+
+<div class="container">
+
+  <h2>🏆 Premio Principal</h2>
+  <div class="highlight">
+    💰 <strong>$1,500 MXN en efectivo</strong>
+  </div>
+
+  <h2>🎟️ Lista de Boletos</h2>
+  <div class="tickets">
+    <p><strong>Todos los boletos a $15 MXN</strong></p>
+    <p>Números disponibles del <strong>00 al 99</strong></p>
+  </div>
+
+  <h2>📌 Cómo Participar</h2>
+  <ol class="steps">
+    <li>Elige tu(s) número(s) de boleto(s).</li>
+    <li>Envíanos el número por WhatsApp o mensaje de Facebook.</li>
+    <li>Realiza el pago de tu(s) boleto(s).</li>
+    <li>Una vez confirmado el pago, tu número queda registrado.</li>
+  </ol>
+
+  <h2>📱 Contacto</h2>
+  <div class="contact">
+    <p>📲 WhatsApp: <strong>844 306 1086</strong></p>
+    <p>📘 Facebook: <a href="https://www.facebook.com/share/17vFhRSoAs/?mibextid=wwXIfr" target="_blank">Rifas y Sorteos El Duque</a></p>
+  </div>
+
+  <h2>🎯 Dinámica del Sorteo</h2>
+  <ul>
+    <li>El ganador se definirá con el número ganador de la <strong>Lotería Nacional</strong> del día del sorteo.</li>
+    <li>Si el número ganador no fue vendido, se repetirá con la siguiente fecha oficial.</li>
+    <li>El sorteo será transmitido en vivo por <strong>Facebook o WhatsApp</strong>.</li>
+  </ul>
+
+  <h2>🎟️ Disponibilidad de Boletos (00–99)</h2>
+  <p style="text-align:center">Boletos disponibles en <span style="color:#2e7d32;font-weight:bold">verde</span> | Apartados/Vendidos en <span style="color:#c62828;font-weight:bold">rojo</span></p>
+
+  <div style="display:grid;grid-template-columns:repeat(10,1fr);gap:8px;margin-top:20px;">
+    <!-- Cambia los boletos vendidos en el arreglo soldTickets -->
+    <script>
+      const soldTickets = ["05","12","18","27","33","45"]; // EDITA AQUÍ
+      for (let i = 0; i <= 99; i++) {
+        const num = i.toString().padStart(2, '0');
+        const div = document.createElement('div');
+        div.textContent = num;
+        div.style.padding = '10px 0';
+        div.style.textAlign = 'center';
+        div.style.borderRadius = '6px';
+        div.style.fontWeight = 'bold';
+        if (soldTickets.includes(num)) {
+          div.style.background = '#ffcdd2';
+          div.style.color = '#b71c1c';
+        } else {
+          div.style.background = '#c8e6c9';
+          div.style.color = '#1b5e20';
+        }
+        document.currentScript.parentElement.appendChild(div);
+      }
+    </script>
+  </div>
+
+</div>
+
+<footer>
+  SORTEOS EL DUQUE – EL QUE NO ARRIESGA NO GANA
+</footer>
+
+</body>
+</html>
